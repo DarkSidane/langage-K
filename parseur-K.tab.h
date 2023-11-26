@@ -57,7 +57,12 @@ extern int yydebug;
     INTEGER = 258,                 /* INTEGER  */
     PLUS = 259,                    /* PLUS  */
     MOINS = 260,                   /* MOINS  */
-    FOIS = 261                     /* FOIS  */
+    FOIS = 261,                    /* FOIS  */
+    INF = 262,                     /* INF  */
+    INFEG = 263,                   /* INFEG  */
+    EGALE = 264,                   /* EGALE  */
+    NOT = 265,                     /* NOT  */
+    OR = 266                       /* OR  */
   };
   typedef enum yytokentype yytoken_kind_t;
 #endif

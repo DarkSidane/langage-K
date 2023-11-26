@@ -5,24 +5,28 @@ extern int yylex();
 void yyerror(const char *s);
 %}
 
-%token INTEGER PLUS MOINS FOIS
+%token INTEGER PLUS MOINS FOIS INF INFEG EGALE NOT OR
 
-%left PLUS MOINS
-%left FOIS
+%left PLUS MOINS FOIS INF INFEG EGALE OR NOT
 
 %%
 lines: /* empty */
-     | lines line
-     ;
+	 | lines line
+	 ;
 
 line: expr '\n' { printf("%d\n", $1); }
-    ;
+	;
 
 expr: expr PLUS expr  { $$ = $1 + $3; }
-    | expr MOINS expr  { $$ = $1 - $3; }
-    | expr FOIS expr  { $$ = $1 * $3; }
-    | INTEGER          { $$ = $1; }
-    ;
+	| expr MOINS expr  { $$ = $1 - $3; }
+	| expr FOIS expr  { $$ = $1 * $3; }
+	| expr INF expr   { $$ = $1 < $3; }
+	| expr INFEG expr { $$ = $1 <= $3; }
+	| expr EGALE expr { $$ = $1 == $3; }
+	| expr OR expr    { $$ = $1 || $3; }
+	| NOT expr        { $$ = !$2; }
+	| INTEGER { $$ = $1; }
+	;
 
 %%
 void yyerror(const char *s) {

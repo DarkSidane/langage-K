@@ -7,6 +7,11 @@
 "+"      { return PLUS; }
 "-"      { return MOINS; }
 "*"      { return FOIS; }
+"<"      { return INF; }
+"<="     { return INFEG; }
+"=="     { return EGALE; }
+"!"      { return NOT; }
+"||"     { return OR; }
 [ \t]    { /* Ignorons les espaces */ }
 .|\n     { return *yytext; }
 
