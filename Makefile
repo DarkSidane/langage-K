@@ -1,4 +1,8 @@
-all: alp-compilateur-k
+all: 	
+	make clean
+	make alp-compilateur-k
+	./alp-compilateur-k 
+
 
 alp-compilateur-k:
 	bison -d alp-parseur-K.y
