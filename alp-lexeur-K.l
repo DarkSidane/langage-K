@@ -1,5 +1,5 @@
 %{
-#include "parseur-K.tab.h"
+#include "alp-parseur-K.tab.h"
 %}
 
 %%

@@ -67,14 +67,14 @@
 
 
 /* First part of user prologue.  */
-#line 1 "src/parseur-K.y"
+#line 1 "alp-parseur-K.y"
 
 #include <stdio.h>
 #include <stdlib.h>
 extern int yylex();
 void yyerror(const char *s);
 
-#line 78 "parseur-K.tab.c"
+#line 78 "alp-parseur-K.tab.c"
 
 # ifndef YY_CAST
 #  ifdef __cplusplus
@@ -97,7 +97,7 @@ void yyerror(const char *s);
 #  endif
 # endif
 
-#include "parseur-K.tab.h"
+#include "alp-parseur-K.tab.h"
 /* Symbol kind.  */
 enum yysymbol_kind_t
 {
@@ -1078,67 +1078,67 @@ yyreduce:
   switch (yyn)
     {
   case 4: /* line: expr '\n'  */
-#line 17 "src/parseur-K.y"
+#line 17 "alp-parseur-K.y"
                 { printf("%d\n", yyvsp[-1]); }
-#line 1084 "parseur-K.tab.c"
+#line 1084 "alp-parseur-K.tab.c"
     break;
 
   case 5: /* expr: expr PLUS expr  */
-#line 20 "src/parseur-K.y"
+#line 20 "alp-parseur-K.y"
                       { yyval = yyvsp[-2] + yyvsp[0]; }
-#line 1090 "parseur-K.tab.c"
+#line 1090 "alp-parseur-K.tab.c"
     break;
 
   case 6: /* expr: expr MOINS expr  */
-#line 21 "src/parseur-K.y"
+#line 21 "alp-parseur-K.y"
                            { yyval = yyvsp[-2] - yyvsp[0]; }
-#line 1096 "parseur-K.tab.c"
+#line 1096 "alp-parseur-K.tab.c"
     break;
 
   case 7: /* expr: expr FOIS expr  */
-#line 22 "src/parseur-K.y"
+#line 22 "alp-parseur-K.y"
                           { yyval = yyvsp[-2] * yyvsp[0]; }
-#line 1102 "parseur-K.tab.c"
+#line 1102 "alp-parseur-K.tab.c"
     break;
 
   case 8: /* expr: expr INF expr  */
-#line 23 "src/parseur-K.y"
+#line 23 "alp-parseur-K.y"
                           { yyval = yyvsp[-2] < yyvsp[0]; }
-#line 1108 "parseur-K.tab.c"
+#line 1108 "alp-parseur-K.tab.c"
     break;
 
   case 9: /* expr: expr INFEG expr  */
-#line 24 "src/parseur-K.y"
+#line 24 "alp-parseur-K.y"
                           { yyval = yyvsp[-2] <= yyvsp[0]; }
-#line 1114 "parseur-K.tab.c"
+#line 1114 "alp-parseur-K.tab.c"
     break;
 
   case 10: /* expr: expr EGALE expr  */
-#line 25 "src/parseur-K.y"
+#line 25 "alp-parseur-K.y"
                           { yyval = yyvsp[-2] == yyvsp[0]; }
-#line 1120 "parseur-K.tab.c"
+#line 1120 "alp-parseur-K.tab.c"
     break;
 
   case 11: /* expr: expr OR expr  */
-#line 26 "src/parseur-K.y"
+#line 26 "alp-parseur-K.y"
                           { yyval = yyvsp[-2] || yyvsp[0]; }
-#line 1126 "parseur-K.tab.c"
+#line 1126 "alp-parseur-K.tab.c"
     break;
 
   case 12: /* expr: NOT expr  */
-#line 27 "src/parseur-K.y"
+#line 27 "alp-parseur-K.y"
                           { yyval = !yyvsp[0]; }
-#line 1132 "parseur-K.tab.c"
+#line 1132 "alp-parseur-K.tab.c"
     break;
 
   case 13: /* expr: INTEGER  */
-#line 28 "src/parseur-K.y"
+#line 28 "alp-parseur-K.y"
                   { yyval = yyvsp[0]; }
-#line 1138 "parseur-K.tab.c"
+#line 1138 "alp-parseur-K.tab.c"
     break;
 
 
-#line 1142 "parseur-K.tab.c"
+#line 1142 "alp-parseur-K.tab.c"
 
       default: break;
     }
@@ -1331,7 +1331,7 @@ yyreturnlab:
   return yyresult;
 }
 
-#line 31 "src/parseur-K.y"
+#line 31 "alp-parseur-K.y"
 
 void yyerror(const char *s) {
   fprintf(stderr, "error: %s\n", s);

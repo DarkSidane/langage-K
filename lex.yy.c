@@ -444,9 +444,9 @@ int yy_flex_debug = 0;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "src/lexeur-K.l"
-#line 2 "src/lexeur-K.l"
-#include "parseur-K.tab.h"
+#line 1 "alp-lexeur-K.l"
+#line 2 "alp-lexeur-K.l"
+#include "alp-parseur-K.tab.h"
 #line 450 "lex.yy.c"
 #line 451 "lex.yy.c"
 
@@ -665,7 +665,7 @@ YY_DECL
 		}
 
 	{
-#line 5 "src/lexeur-K.l"
+#line 5 "alp-lexeur-K.l"
 
 #line 670 "lex.yy.c"
 
@@ -726,63 +726,63 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 6 "src/lexeur-K.l"
+#line 6 "alp-lexeur-K.l"
 { yylval= atoi(yytext); return INTEGER; }
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 7 "src/lexeur-K.l"
+#line 7 "alp-lexeur-K.l"
 { return PLUS; }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 8 "src/lexeur-K.l"
+#line 8 "alp-lexeur-K.l"
 { return MOINS; }
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 9 "src/lexeur-K.l"
+#line 9 "alp-lexeur-K.l"
 { return FOIS; }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 10 "src/lexeur-K.l"
+#line 10 "alp-lexeur-K.l"
 { return INF; }
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 11 "src/lexeur-K.l"
+#line 11 "alp-lexeur-K.l"
 { return INFEG; }
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 12 "src/lexeur-K.l"
+#line 12 "alp-lexeur-K.l"
 { return EGALE; }
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 13 "src/lexeur-K.l"
+#line 13 "alp-lexeur-K.l"
 { return NOT; }
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 14 "src/lexeur-K.l"
+#line 14 "alp-lexeur-K.l"
 { return OR; }
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 15 "src/lexeur-K.l"
+#line 15 "alp-lexeur-K.l"
 { /* Ignorons les espaces */ }
 	YY_BREAK
 case 11:
 /* rule 11 can match eol */
 YY_RULE_SETUP
-#line 16 "src/lexeur-K.l"
+#line 16 "alp-lexeur-K.l"
 { return *yytext; }
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 18 "src/lexeur-K.l"
+#line 18 "alp-lexeur-K.l"
 ECHO;
 	YY_BREAK
 #line 788 "lex.yy.c"
@@ -1790,6 +1790,6 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 18 "src/lexeur-K.l"
+#line 18 "alp-lexeur-K.l"
 
 
