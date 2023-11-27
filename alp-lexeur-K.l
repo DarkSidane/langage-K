@@ -12,6 +12,9 @@
 "=="     { return EGALE; }
 "!"      { return NOT; }
 "||"     { return OR; }
+"&&"     { return AND; }
+"("      { return GPAR; }
+")"      { return DPAR; }
 [ \t]    { /* Ignorons les espaces */ }
 .|\n     { return *yytext; }
 

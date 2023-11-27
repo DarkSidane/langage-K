@@ -62,7 +62,10 @@ extern int yydebug;
     INFEG = 263,                   /* INFEG  */
     EGALE = 264,                   /* EGALE  */
     NOT = 265,                     /* NOT  */
-    OR = 266                       /* OR  */
+    OR = 266,                      /* OR  */
+    AND = 267,                     /* AND  */
+    GPAR = 268,                    /* GPAR  */
+    DPAR = 269                     /* DPAR  */
   };
   typedef enum yytokentype yytoken_kind_t;
 #endif

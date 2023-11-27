@@ -5,9 +5,9 @@ extern int yylex();
 void yyerror(const char *s);
 %}
 
-%token INTEGER PLUS MOINS FOIS INF INFEG EGALE NOT OR
+%token INTEGER PLUS MOINS FOIS INF INFEG EGALE NOT OR AND GPAR DPAR
 
-%left PLUS MOINS FOIS INF INFEG EGALE OR NOT
+%left PLUS MOINS FOIS INF INFEG EGALE OR NOT AND GPAR DPAR
 
 %%
 lines: /* empty */
@@ -24,6 +24,8 @@ expr: expr PLUS expr  { $$ = $1 + $3; }
 	| expr INFEG expr { $$ = $1 <= $3; }
 	| expr EGALE expr { $$ = $1 == $3; }
 	| expr OR expr    { $$ = $1 || $3; }
+	| expr AND expr   { $$ = $1 && $3; }
+	| GPAR expr DPAR  { $$ = $2; }
 	| NOT expr        { $$ = !$2; }
 	| INTEGER { $$ = $1; }
 	;
