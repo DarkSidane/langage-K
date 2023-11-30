@@ -67,9 +67,15 @@ extern int yydebug;
     GPAR = 268,                    /* GPAR  */
     DPAR = 269,                    /* DPAR  */
     EOL = 270,                     /* EOL  */
-    VARIABLE = 271,                /* VARIABLE  */
-    COMMA = 272,                   /* COMMA  */
-    INT = 273                      /* INT  */
+    EGAL = 271,                    /* EGAL  */
+    IF = 272,                      /* IF  */
+    WHILE = 273,                   /* WHILE  */
+    ELSE = 274,                    /* ELSE  */
+    GACC = 275,                    /* GACC  */
+    DACC = 276,                    /* DACC  */
+    VARIABLE = 277,                /* VARIABLE  */
+    COMMA = 278,                   /* COMMA  */
+    INT = 279                      /* INT  */
   };
   typedef enum yytokentype yytoken_kind_t;
 #endif
@@ -83,7 +89,7 @@ union YYSTYPE
   int intval;
   char* strval;
 
-#line 87 "alp-parseur-K.tab.h"
+#line 93 "alp-parseur-K.tab.h"
 
 };
 typedef union YYSTYPE YYSTYPE;
