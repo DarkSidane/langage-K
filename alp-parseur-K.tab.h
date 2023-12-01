@@ -75,7 +75,8 @@ extern int yydebug;
     DACC = 276,                    /* DACC  */
     VARIABLE = 277,                /* VARIABLE  */
     COMMA = 278,                   /* COMMA  */
-    INT = 279                      /* INT  */
+    INT = 279,                     /* INT  */
+    VIRGULE = 280                  /* VIRGULE  */
   };
   typedef enum yytokentype yytoken_kind_t;
 #endif
@@ -84,12 +85,12 @@ extern int yydebug;
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 union YYSTYPE
 {
-#line 11 "alp-parseur-K.y"
+#line 13 "alp-parseur-K.y"
 
   int intval;
   char* strval;
 
-#line 93 "alp-parseur-K.tab.h"
+#line 94 "alp-parseur-K.tab.h"
 
 };
 typedef union YYSTYPE YYSTYPE;

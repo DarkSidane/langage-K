@@ -16,6 +16,7 @@
 "("                   { printf("GPAR\n"); return GPAR; }
 ")"                   { printf("DPAR\n"); return DPAR; }
 ";"		   { printf("COMMA\n"); return COMMA; }
+","			{ printf("VIRGULE\n"); return VIRGULE; }
 "int"                 { printf("INT\n"); return INT; }
 "=" 		 { printf("EGAL\n"); return EGAL; }
 "if"                  { printf("IF\n"); return IF; }
