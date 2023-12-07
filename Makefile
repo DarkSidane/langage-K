@@ -1,7 +1,7 @@
 all:    
 	make clean
 	make alp-compilateur-k
-	./alp-compilateur-k 
+	./alp-compilateur-k < source.txt
 
 alp-compilateur-k:
 	bison -d alp-parseur-K.y
